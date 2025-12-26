@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.S. Darda & Co. - Trusted Partners in Growth</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Swiper for carousels -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'space': ['Space Grotesk', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            50: '#ffffff',
+                            100: '#ffffff',
+                            200: '#ffffff',
+                            300: '#ffffff',
+                            400: '#ffffff',
+                            500: '#ffffff',
+                            600: '#ffffff',
+                            700: '#ffffff',
+                            800: '#ffffff',
+                            900: '#ffffff',
+                        },
+                        'accent': {
+                            50: '#000000',
+                            100: '#000000',
+                            200: '#000000',
+                            300: '#000000',
+                            400: '#000000',
+                            500: '#ff0000',
+                            600: '#ff0000',
+                            700: '#ff0000',
+                            800: '#ff0000',
+                            900: '#ff0000',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white sticky top-0 z-50 border-b-2 border-black">
+        <div class="container mx-auto px-8">
+            <div class="flex items-center justify-between py-6">
+                <!-- Logo -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-black flex items-center justify-center">
+                        <span class="text-white font-bold text-lg md:text-2xl font-space">HSD</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <h1 class="text-2xl font-bold text-black font-space">H.S. Darda & Co.</h1>
+                        <p class="text-sm text-gray-600 font-inter">Chartered Accountants</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">About</a>
+                    <a href="#services" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Services</a>
+                    <a href="#industries" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Industries</a>
+                    <a href="#insights" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Insights</a>
+                    <a href="#careers" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Careers</a>
+                    <a href="#stories" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Stories</a>
+                    <a href="#contact" class="nav-link text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider transition-colors">Contact</a>
+                </div>
+                
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block bg-red-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-black transition-colors">
+                        Schedule Consultation
+                    </button>
+                    <button class="text-black hover:text-red-600 font-bold text-sm uppercase tracking-wider">
+                        EN
+                    </button>
+                    <button class="md:hidden text-black p-2" id="mobile-menu-toggle">
+                        <!-- Custom Hamburger Icon -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t-2 border-black" id="mobile-menu">
+            <div class="container mx-auto px-8 py-6 space-y-4">
+                <a href="#home" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Home</a>
+                <a href="#about" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">About</a>
+                <a href="#services" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Services</a>
+                <a href="#industries" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Industries</a>
+                <a href="#insights" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Insights</a>
+                <a href="#careers" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Careers</a>
+                <a href="#stories" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Client Stories</a>
+                <a href="#contact" class="block py-2 text-black hover:text-red-600 font-inter font-bold text-sm uppercase tracking-wider">Contact</a>
+                
+                <!-- Mobile CTA Button -->
+                <div class="pt-4 border-t border-black">
+                    <button class="w-full bg-red-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-black transition-colors">
+                        Schedule Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Business Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-red-600/90"></div>
+        </div>
+        
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="grid grid-cols-12 gap-8 items-center min-h-screen">
+                <div class="col-span-12 md:col-span-1">
+                    <div class="w-16 h-16 bg-white"></div>
+                </div>
+                <div class="col-span-12 md:col-span-11 text-white">
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6" data-aos="fade-up">
+                        TRUSTED PARTNERS<br/>
+                        IN GROWTH
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl" data-aos="fade-up" data-aos-delay="200">
+                        Across Borders, With Integrity
+                    </p>
+                    <p class="text-lg mb-12 max-w-2xl opacity-90" data-aos="fade-up" data-aos-delay="300">
+                        Empowering businesses in India, the UAE, and beyond through insightful advisory, 
+                        structured compliance, and long-term partnership.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6" data-aos="fade-up" data-aos-delay="400">
+                        <button class="bg-white text-black px-12 py-6 font-bold text-lg uppercase tracking-wider hover:bg-gray-200 transition-colors">
+                            Schedule Consultation
+                        </button>
+                        <button class="border-4 border-white text-white px-12 py-6 font-bold text-lg uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
+                            Explore Services
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar / Metrics -->
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 md:col-span-3">
+                    <div class="border-l-8 border-white pl-8">
+                        <p class="text-2xl font-bold uppercase tracking-wider" data-aos="fade-up">
+                            Over Five Decades<br/>
+                            Of Trusted Advisory
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-9">
+                    <div class="grid grid-cols-3 gap-8 text-center">
+                        <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="text-6xl font-bold mb-2">50+</div>
+                            <div class="text-lg font-bold uppercase tracking-wider">Years of Experience</div>
+                        </div>
+                        <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-6xl font-bold mb-2">10+</div>
+                            <div class="text-lg font-bold uppercase tracking-wider">Countries with Clients</div>
+                        </div>
+                        <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="text-6xl font-bold mb-2">500+</div>
+                            <div class="text-lg font-bold uppercase tracking-wider">Professionals Trained</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-black"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-black pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-black leading-tight mb-4">
+                                OVER FIVE DECADES<br/>
+                                OF TRUSTED ADVISORY
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-2xl">
+                                Building lasting partnerships through excellence, integrity, and innovation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-8 mb-20">
+                <!-- Left Column - Text -->
+                <div class="col-span-12 md:col-span-6" data-aos="fade-right">
+                    <div class="border-l-8 border-black pl-8">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                            For more than 50 years, H.S. Darda & Co. has been a cornerstone of financial excellence, 
+                            combining deep expertise with unwavering integrity. Our India-UAE foundation serves as a springboard 
+                            for global client success, built on trust and transparency.
+                        </p>
+                        
+                        <!-- Key Features -->
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-black flex items-center justify-center flex-shrink-0">
+                                    <!-- Globe Icon -->
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                                        <path d="M2 12H22" stroke="white" stroke-width="2"/>
+                                        <path d="M12 2C12 2 6 8 6 12C6 16 12 22 12 22C12 22 18 16 18 12C18 8 12 2 12 2Z" stroke="white" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">GLOBAL VISION</h4>
+                                    <p class="text-sm text-gray-600">International expertise & cross-border experience</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-black flex items-center justify-center flex-shrink-0">
+                                    <!-- Bridge Icon -->
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 16L6 10L10 16" stroke="white" stroke-width="2" fill="none"/>
+                                        <path d="M14 16L18 10L22 16" stroke="white" stroke-width="2" fill="none"/>
+                                        <path d="M12 10L12 16" stroke="white" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">CROSS-BORDER FOCUS</h4>
+                                    <p class="text-sm text-gray-600">India-UAE specialists facilitating growth</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-black flex items-center justify-center flex-shrink-0">
+                                    <!-- Layers Icon -->
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="6" width="18" height="3" stroke="white" stroke-width="2" fill="none"/>
+                                        <rect x="5" y="11" width="14" height="3" stroke="white" stroke-width="2" fill="none"/>
+                                        <rect x="7" y="16" width="10" height="3" stroke="white" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">MULTI-DISCIPLINARY</h4>
+                                    <p class="text-sm text-gray-600">Audit, tax, compliance, advisory & finance</p>
+                                </div>
+                            </div>
+                        </div>
+             
+                        
+                        <button class="bg-black text-white px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-gray-900 transition-colors">
+                            Learn More About Our Journey
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column - Visual -->
+                <div class="col-span-12 md:col-span-6" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Our Team" class="w-full border-2 border-black">
+                        
+                        <!-- Floating Stats -->
+                        <div class="absolute top-0 right-0 bg-white p-6 border-2 border-black">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-black">50+</div>
+                                <div class="text-sm font-semibold">YEARS</div>
+                                <div class="text-xs text-gray-600">EXPERIENCE</div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 bg-white p-6 border-2 border-black">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-black">10+</div>
+                                <div class="text-sm font-semibold">COUNTRIES</div>
+                                <div class="text-xs text-gray-600">GLOBAL REACH</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What problem are we solving? -->
+    <section class="py-24 bg-black text-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-white"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-white pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
+                                WHAT PROBLEM<br/>
+                                ARE WE SOLVING?
+                            </h2>
+                            <p class="text-xl text-gray-300 max-w-2xl">
+                                Addressing critical challenges businesses face today
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content - Problem-Solution Grid -->
+            <div class="grid grid-cols-12 gap-8">
+                <!-- Headers -->
+                <div class="col-span-12 md:col-span-3" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-8 uppercase tracking-wider">Clients' Challenges</h3>
+                </div>
+                <div class="col-span-12 md:col-span-4" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-8 uppercase tracking-wider">What It Means for Them</h3>
+                </div>
+                <div class="col-span-12 md:col-span-5" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 uppercase tracking-wider">How H.S. Darda & Co. Helps</h3>
+                </div>
+
+                <!-- Row 1: Compliance -->
+                <div class="col-span-12 md:col-span-3 border-l-8 border-white pl-8" data-aos="fade-right">
+                    <h4 class="text-xl font-bold mb-4">Ensuring compliance and governance</h4>
+                </div>
+                <div class="col-span-12 md:col-span-4 border-l-4 border-gray-600 pl-8" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-gray-300">Fear of penalties, reputational risks, and loss of investor confidence</p>
+                </div>
+                <div class="col-span-12 md:col-span-5 border-l-4 border-red-600 pl-8" data-aos="fade-right" data-aos-delay="200">
+                    <p class="text-gray-300">Robust audit, internal controls, and regulatory compliance framework</p>
+                </div>
+
+                <!-- Row 2: Tax -->
+                <div class="col-span-12 md:col-span-3 border-l-8 border-white pl-8" data-aos="fade-right">
+                    <h4 class="text-xl font-bold mb-4">Managing tax efficiently</h4>
+                </div>
+                <div class="col-span-12 md:col-span-4 border-l-4 border-gray-600 pl-8" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-gray-300">Higher tax liabilities, lack of planning, missed opportunities</p>
+                </div>
+                <div class="col-span-12 md:col-span-5 border-l-4 border-red-600 pl-8" data-aos="fade-right" data-aos-delay="200">
+                    <p class="text-gray-300">Strategic tax structuring for India & UAE, including direct, indirect & corporate taxes</p>
+                </div>
+
+                <!-- Row 3: Financial Clarity -->
+                <div class="col-span-12 md:col-span-3 border-l-8 border-white pl-8" data-aos="fade-right">
+                    <h4 class="text-xl font-bold mb-4">Building financial clarity</h4>
+                </div>
+                <div class="col-span-12 md:col-span-4 border-l-4 border-gray-600 pl-8" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-gray-300">Lack of reliable MIS, budgeting, and reporting leads to poor decisions</p>
+                </div>
+                <div class="col-span-12 md:col-span-5 border-l-4 border-red-600 pl-8" data-aos="fade-right" data-aos-delay="200">
+                    <p class="text-gray-300">Virtual CFO solutions offering dashboards, controls, and forward-looking insights</p>
+                </div>
+
+                <!-- Row 4: Cross-Border -->
+                <div class="col-span-12 md:col-span-3 border-l-8 border-white pl-8" data-aos="fade-right">
+                    <h4 class="text-xl font-bold mb-4">Navigating cross-border complexities</h4>
+                </div>
+                <div class="col-span-12 md:col-span-4 border-l-4 border-gray-600 pl-8" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-gray-300">Confusion over multiple regulations, tax rules, and compliance in India & abroad</p>
+                </div>
+                <div class="col-span-12 md:col-span-5 border-l-4 border-red-600 pl-8" data-aos="fade-right" data-aos-delay="200">
+                    <p class="text-gray-300">Provide clear, structured advisory on FEMA, inbound & outbound investments, and international taxation</p>
+                </div>
+
+                <!-- Row 5: Global Scaling -->
+                <div class="col-span-12 md:col-span-3 border-l-8 border-white pl-8" data-aos="fade-right">
+                    <h4 class="text-xl font-bold mb-4">Scaling globally with confidence</h4>
+                </div>
+                <div class="col-span-12 md:col-span-4 border-l-4 border-gray-600 pl-8" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-gray-300">Businesses hesitate to expand due to legal, tax, and funding risks</p>
+                </div>
+                <div class="col-span-12 md:col-span-5 border-l-4 border-red-600 pl-8" data-aos="fade-right" data-aos-delay="200">
+                    <p class="text-gray-300">Global advisory network covering India, UAE, UK, GCC, Far East & Australia</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16" data-aos="fade-up">
+                <button class="bg-white text-black px-12 py-6 font-bold text-lg uppercase tracking-wider hover:bg-gray-200 transition-colors">
+                    Solve Your Business Challenges
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Specializations -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-red-600"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-black pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-black leading-tight mb-4">
+                                OUR CORE<br/>
+                                SPECIALIZATIONS
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-2xl">
+                                Smart Solutions. Strong Foundations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-12 gap-8 mb-20">
+                <div class="col-span-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="border-2 border-black p-8" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-16 h-16 bg-black flex items-center justify-center mb-6">
+                                <!-- Custom Premium Lightbulb Icon -->
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="12" r="8" stroke="white" stroke-width="2" fill="none"/>
+                                    <path d="M12 18L12 22L20 22L20 18" stroke="white" stroke-width="2" fill="none"/>
+                                    <path d="M14 24L18 24" stroke="white" stroke-width="2"/>
+                                    <circle cx="16" cy="12" r="3" fill="white"/>
+                                    <path d="M8 10C8 10 10 8 16 8C22 8 24 10 24 10" stroke="white" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-black mb-4">ADVISORY & STRUCTURING</h3>
+                            <div class="text-gray-700 space-y-2">
+                                <p>Business structuring</p>
+                                <p>M&A advisory</p>
+                                <p>Financial planning</p>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-black p-8" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-16 h-16 bg-black flex items-center justify-center mb-6">
+                                <!-- Custom Premium Shield Icon -->
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 2L4 8L4 16C4 22 16 30 16 30C16 30 28 22 28 16L28 8L16 2Z" stroke="white" stroke-width="2" fill="none"/>
+                                    <circle cx="16" cy="14" r="4" fill="white"/>
+                                    <path d="M16 10L16 18" stroke="black" stroke-width="2"/>
+                                    <path d="M12 14L20 14" stroke="black" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-black mb-4">AUDIT & RISK ASSURANCE</h3>
+                            <div class="text-gray-700 space-y-2">
+                                <p>Statutory audits</p>
+                                <p>Internal audits</p>
+                                <p>Risk management</p>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-black p-8" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-16 h-16 bg-black flex items-center justify-center mb-6">
+                                <!-- Custom Premium Document Icon -->
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="6" y="2" width="20" height="28" rx="2" stroke="white" stroke-width="2" fill="none"/>
+                                    <path d="M10 8L22 8" stroke="white" stroke-width="2"/>
+                                    <path d="M10 12L22 12" stroke="white" stroke-width="2"/>
+                                    <path d="M10 16L18 16" stroke="white" stroke-width="2"/>
+                                    <path d="M10 20L16 20" stroke="white" stroke-width="2"/>
+                                    <circle cx="16" cy="26" r="2" fill="white"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-black mb-4">TAXATION (INDIA + UAE)</h3>
+                            <div class="text-gray-700 space-y-2">
+                                <p>Direct & indirect tax</p>
+                                <p>Cross-border tax</p>
+                                <p>Tax compliance</p>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-black p-8" data-aos="fade-up" data-aos-delay="400">
+                            <div class="w-16 h-16 bg-black flex items-center justify-center mb-6">
+                                <!-- Custom Premium Calculator Icon -->
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="4" width="24" height="24" rx="2" stroke="white" stroke-width="2" fill="none"/>
+                                    <path d="M4 12L28 12" stroke="white" stroke-width="2"/>
+                                    <path d="M12 4L12 28" stroke="white" stroke-width="2"/>
+                                    <path d="M20 12L20 28" stroke="white" stroke-width="2"/>
+                                    <circle cx="8" cy="8" r="1" fill="white"/>
+                                    <circle cx="16" cy="8" r="1" fill="white"/>
+                                    <circle cx="8" cy="16" r="1" fill="white"/>
+                                    <circle cx="16" cy="16" r="1" fill="white"/>
+                                    <circle cx="24" cy="16" r="1" fill="white"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-black mb-4">ACCOUNTING & COMPLIANCE</h3>
+                            <div class="text-gray-700 space-y-2">
+                                <p>Bookkeeping</p>
+                                <p>GST compliance</p>
+                                <p>Regulatory filings</p>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-black p-8" data-aos="fade-up" data-aos-delay="500">
+                            <div class="w-16 h-16 bg-black flex items-center justify-center mb-6">
+                                <!-- Custom Premium Chart Icon -->
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="20" width="4" height="8" stroke="white" stroke-width="2" fill="white"/>
+                                    <rect x="10" y="16" width="4" height="12" stroke="white" stroke-width="2" fill="white"/>
+                                    <rect x="16" y="12" width="4" height="16" stroke="white" stroke-width="2" fill="white"/>
+                                    <rect x="22" y="8" width="4" height="20" stroke="white" stroke-width="2" fill="white"/>
+                                    <path d="M2 26L30 26" stroke="white" stroke-width="2"/>
+                                    <circle cx="6" cy="20" r="1" fill="black"/>
+                                    <circle cx="12" cy="16" r="1" fill="black"/>
+                                    <circle cx="18" cy="12" r="1" fill="black"/>
+                                    <circle cx="24" cy="8" r="1" fill="black"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-black mb-4">VIRTUAL CFO SUPPORT</h3>
+                            <div class="text-gray-700 space-y-2">
+                                <p>Financial strategy</p>
+                                <p>Cash flow management</p>
+                                <p>Performance analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                <button class="bg-red-600 text-white px-12 py-6 text-lg font-bold uppercase tracking-wider hover:bg-black transition-colors">
+                    View Full Services List
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section id="industries" class="py-24 bg-black text-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-white"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-white pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
+                                WHO WE SERVE
+                            </h2>
+                            <p class="text-xl text-gray-300 max-w-2xl">
+                                Tailored solutions for every stakeholder.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-8 mb-20">
+                <div class="col-span-12 md:col-span-4" data-aos="fade-right">
+                    <div class="border-l-8 border-white pl-8">
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                            We believe in personalized handholding and customized approaches for each client type. 
+                            Our expertise spans across diverse sectors, ensuring that every stakeholder receives 
+                            the attention and solutions they deserve.
+                        </p>
+                        <button class="bg-white text-black px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors">
+                            Get Started With Us
+                        </button>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-8" data-aos="fade-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="border-2 border-white p-6">
+                            <h4 class="font-bold text-xl mb-4">CORPORATES & INSTITUTIONS</h4>
+                            <div class="text-gray-300 space-y-2">
+                                <p>Comprehensive audit services</p>
+                                <p>Strategic financial advisory</p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-white p-6">
+                            <h4 class="font-bold text-xl mb-4">STARTUPS</h4>
+                            <div class="text-gray-300 space-y-2">
+                                <p>Business structuring</p>
+                                <p>Fund-raising support</p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-white p-6">
+                            <h4 class="font-bold text-xl mb-4">HNIS & FAMILY OFFICES</h4>
+                            <div class="text-gray-300 space-y-2">
+                                <p>Wealth management</p>
+                                <p>Tax optimization</p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-white p-6">
+                            <h4 class="font-bold text-xl mb-4">INTERNATIONAL CLIENTS</h4>
+                            <div class="text-gray-300 space-y-2">
+                                <p>Cross-border advisory</p>
+                                <p>Entry strategy</p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-white p-6">
+                            <h4 class="font-bold text-xl mb-4">CA STUDENTS & INTERNS</h4>
+                            <div class="text-gray-300 space-y-2">
+                                <p>Articleship programs</p>
+                                <p>Professional training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Impact & Trust -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-black"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-black pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-black leading-tight mb-4">
+                                CLIENT IMPACT<br/>
+                                & TRUST
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-2xl">
+                                Building lasting partnerships through excellence and integrity
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-8 mb-20">
+                <div class="col-span-12 md:col-span-7" data-aos="fade-right">
+                    <div class="border-l-8 border-black pl-8">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                            Our foundation is built on ethics, integrity, and long-term relationships. 
+                            We measure our success by the growth and trust we build with every client, 
+                            ensuring partnerships that withstand the test of time and market challenges.
+                        </p>
+                        
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-3 gap-8 mb-8">
+                            <div class="text-center border-2 border-black p-4">
+                                <div class="text-4xl font-bold text-black">50+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Years</div>
+                            </div>
+                            <div class="text-center border-2 border-black p-4">
+                                <div class="text-4xl font-bold text-black">10+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Countries</div>
+                            </div>
+                            <div class="text-center border-2 border-black p-4">
+                                <div class="text-4xl font-bold text-black">500+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Professionals</div>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <button class="bg-black text-white px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors">
+                                Read More Case Studies
+                            </button>
+                            <button class="border-4 border-black text-black px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-colors">
+                                Explore Client Stories
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-5" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Client Trust" class="w-full border-2 border-black">
+                        <!-- Floating Stat -->
+                        <div class="absolute -top-6 -right-6 bg-white p-6 border-2 border-black">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-black">50+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Years Trust</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights & Updates -->
+    <section id="insights" class="py-24 bg-black text-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-white"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-white pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
+                                INSIGHTS<br/>
+                                & UPDATES
+                            </h2>
+                            <p class="text-xl text-gray-300 max-w-2xl">
+                                Clarity in a complex world
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 md:col-span-5" data-aos="fade-right">
+                    <div class="border-l-8 border-white pl-8">
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                            Stay updated with the latest developments in taxation, compliance, and business advisory. 
+                            Our experts break down complex regulations into actionable insights.
+                        </p>
+                        
+                        <!-- Newsletter -->
+                        <div class="border-2 border-white p-6 mb-8">
+                            <h4 class="text-xl font-bold mb-4">SUBSCRIBE TO OUR NEWSLETTER</h4>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-black text-white border-2 border-white focus:outline-none">
+                                <button class="bg-white text-black px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+
+                        <button class="bg-white text-black px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors">
+                            Visit Insights Hub
+                        </button>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-7" data-aos="fade-left">
+                    <div class="space-y-6">
+                        <div class="border-2 border-white p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="font-bold text-xl">UAE Corporate Tax: What Businesses Must Know in 2026</h4>
+                                <span class="text-sm font-bold">Jan 15, 2026</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">Key updates and compliance requirements for UAE corporate tax...</p>
+                            <a href="#" class="text-white hover:text-gray-300 text-sm font-bold uppercase tracking-wider">Read More →</a>
+                        </div>
+                        <div class="border-2 border-white p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="font-bold text-xl">FEMA Updates for NRIs – Jan 2026</h4>
+                                <span class="text-sm font-bold">Jan 10, 2026</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">Latest changes in Foreign Exchange Management Act regulations...</p>
+                            <a href="#" class="text-white hover:text-gray-300 text-sm font-bold uppercase tracking-wider">Read More →</a>
+                        </div>
+                        <div class="border-2 border-white p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="font-bold text-xl">Structuring for Global Startups – India vs Dubai</h4>
+                                <span class="text-sm font-bold">Jan 5, 2026</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">Comparative analysis of startup ecosystems and regulatory frameworks...</p>
+                            <a href="#" class="text-white hover:text-gray-300 text-sm font-bold uppercase tracking-wider">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Highlight -->
+    <section id="careers" class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-red-600"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-black pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-black leading-tight mb-4">
+                                CAREERS<br/>
+                                AT HSD
+                            </h2>
+                            <p class="text-xl text-gray-600 max-w-2xl">
+                                Build your future with us
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-8 mb-20">
+                <div class="col-span-12 md:col-span-7" data-aos="fade-right">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+                            <div class="space-y-4">
+                                <div class="w-16 h-16 bg-black flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-black">ARTICLESHIP & INTERNSHIP</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">
+                                    Comprehensive training programs for aspiring professionals
+                                </p>
+                            </div>
+                            <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="w-16 h-16 bg-black flex items-center justify-center">
+                                    <i class="fas fa-chart-bar text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-black">MULTI-DOMAIN EXPERTISE</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">
+                                    Develop skills across audit, tax, advisory, and compliance
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-8" data-aos="fade-up" data-aos-delay="200">
+                            <div class="space-y-4">
+                                <div class="w-16 h-16 bg-black flex items-center justify-center">
+                                    <i class="fas fa-globe text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-black">CROSS-BORDER CLIENTS</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">
+                                    Gain international exposure and diverse experience
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-6 mt-12" data-aos="fade-up" data-aos-delay="400">
+                        <button class="bg-red-600 text-white px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-black transition-colors">
+                            Explore Careers
+                        </button>
+                        <button class="border-4 border-red-600 text-black px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white transition-colors">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-5" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Careers" class="w-full border-2 border-black">
+                        <!-- Floating Card -->
+                        <div class="absolute -top-6 -right-6 bg-white p-6 border-2 border-black">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-black">500+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Professionals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence -->
+    <section class="py-24 bg-black text-white">
+        <div class="container mx-auto px-8">
+            <!-- Swiss Style Header -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-1">
+                        <div class="w-16 h-16 bg-white"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-11">
+                        <div class="border-t-2 border-white pt-8">
+                            <h2 class="text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
+                                GLOBAL<br/>
+                                PRESENCE
+                            </h2>
+                            <p class="text-xl text-gray-300 max-w-2xl">
+                                Locally rooted, globally connected
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-8 mb-20">
+                <div class="col-span-12 md:col-span-6" data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="border-l-8 border-white pl-8">
+                            <h4 class="text-2xl font-bold mb-6">INDIA</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Jaipur</span>
+                                </div>
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Mumbai</span>
+                                </div>
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Delhi</span>
+                                </div>
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Bengaluru</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-8 border-white pl-8">
+                            <h4 class="text-2xl font-bold mb-6">UAE</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Dubai</span>
+                                </div>
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Sharjah</span>
+                                </div>
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Abu Dhabi</span>
+                                </div>
+                                <div class="border-2 border-white p-4 text-center">
+                                    <span class="font-bold">Ajman</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-8 border-white pl-8">
+                            <h4 class="text-2xl font-bold mb-6">TARGET REGIONS</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="border-2 border-white px-4 py-2 font-bold text-sm">UK</span>
+                                <span class="border-2 border-white px-4 py-2 font-bold text-sm">Australia</span>
+                                <span class="border-2 border-white px-4 py-2 font-bold text-sm">Far East</span>
+                                <span class="border-2 border-white px-4 py-2 font-bold text-sm">Europe</span>
+                                <span class="border-2 border-white px-4 py-2 font-bold text-sm">Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-white text-black px-8 py-4 font-bold text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors mt-8" data-aos="fade-up">
+                        Contact Our Offices
+                    </button>
+                </div>
+                <div class="col-span-12 md:col-span-6" data-aos="fade-left">
+                    <div class="relative">
+                        <!-- Interactive World Map -->
+                        <div class="relative w-full h-96 bg-black border-2 border-white overflow-hidden">
+                            <!-- Google Maps iframe -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15282225.285592434!2d73.71652121474657!3d20.750301095868425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b391%3A0xd78c95a5aee1c74!2sIndia!2m2!1s0x3e5f43496d9c8e5b%3A0x5b4d6a5d5a5a5a5a!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1234567890"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="opacity-80">
+                            </iframe>
+                            
+                            <!-- Location Markers Overlay -->
+                            <!-- India Locations -->
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Jaipur
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Mumbai
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/3">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Delhi
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-2/3">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Bengaluru
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- UAE Locations -->
+                            <div class="absolute top-1/2 left-1/2 transform translate-x-1/4 -translate-y-1/3">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Dubai
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform translate-x-1/3 -translate-y-1/3">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Sharjah
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform translate-x-1/5 -translate-y-1/4">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Abu Dhabi
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform translate-x-1/6 -translate-y-1/3">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-4 h-4 bg-red-600 rounded-full animate-pulse border-2 border-white"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Ajman
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Target Regions -->
+                            <div class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-3 h-3 bg-white rounded-full animate-pulse border-2 border-black"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        UK
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-3/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-3 h-3 bg-white rounded-full animate-pulse border-2 border-black"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Australia
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/3 left-3/4 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-3 h-3 bg-white rounded-full animate-pulse border-2 border-black"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Far East
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-3 h-3 bg-white rounded-full animate-pulse border-2 border-black"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Europe
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2">
+                                <div class="location-marker relative group cursor-pointer">
+                                    <div class="w-3 h-3 bg-white rounded-full animate-pulse border-2 border-black"></div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                        Saudi Arabia
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Stats -->
+                        <div class="absolute -top-6 -right-6 bg-white p-6 border-2 border-black">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-black">10+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Countries</div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 border-2 border-black">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-black">8+</div>
+                                <div class="text-sm font-bold uppercase tracking-wider">Cities</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 relative overflow-hidden">
+        <!-- Large HSD Letters with Cut Effect -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="relative flex items-center" style="letter-spacing: -0.15em;">
+                <!-- H Letter with Cut Effect -->
+                <div class="letter-container relative pointer-events-auto cursor-pointer transition-all duration-300 hover:scale-110">
+                    <div class="letter-h text-[12rem] md:text-[35rem] font-black text-white/10 hover:text-white/20 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        <!-- Cut Effect -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-black transform translate-y-1/2"></div>
+                        <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></div>
+                        H
+                    </div>
+                </div>
+                <!-- S Letter with Cut Effect -->
+                <div class="letter-container relative pointer-events-auto cursor-pointer transition-all duration-300 hover:scale-110">
+                    <div class="letter-s text-[12rem] md:text-[35rem] font-black text-white/10 hover:text-white/20 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        <!-- Cut Effect -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-black transform translate-y-1/2"></div>
+                        <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></div>
+                        S
+                    </div>
+                </div>
+                <!-- D Letter with Cut Effect -->
+                <div class="letter-container relative pointer-events-auto cursor-pointer transition-all duration-300 hover:scale-110">
+                    <div class="letter-d text-[12rem] md:text-[35rem] font-black text-white/10 hover:text-white/20 transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        <!-- Cut Effect -->
+                        <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-black transform translate-y-1/2"></div>
+                        <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-white"></div>
+                        D
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 md:col-span-4">
+                    <div class="w-16 h-16 bg-white mb-6"></div>
+                    <h3 class="text-2xl font-bold mb-4">H.S. Darda & Co.</h3>
+                    <p class="text-gray-400 mb-6">Trusted Partners in Growth – Across Borders, With Integrity.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-4">
+                    <h4 class="font-bold mb-4 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-12 md:col-span-4">
+                    <h4 class="font-bold mb-4 uppercase tracking-wider">Legal</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Disclaimer</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 H.S. Darda & Co. All rights reserved.</p>
+            </div>
+        </div>
+
+        <!-- Enhanced Lighting Effect Styles -->
+        <style>
+            .letter-container {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .letter-container::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, transparent 70%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                z-index: 1;
+            }
+            
+            .letter-container:hover::before {
+                opacity: 1;
+            }
+            
+            .letter-container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                z-index: 2;
+            }
+            
+            .letter-container:hover::after {
+                opacity: 1;
+            }
+            
+            .letter-h, .letter-s, .letter-d {
+                position: relative;
+                text-shadow: 0 0 30px rgba(255,255,255,0.1);
+                transition: all 0.3s ease;
+                line-height: 1;
+            }
+            
+            .letter-container:hover .letter-h,
+            .letter-container:hover .letter-s,
+            .letter-container:hover .letter-d {
+                text-shadow: 0 0 60px rgba(255,255,255,0.4),
+                             0 0 80px rgba(255,255,255,0.3),
+                             0 0 100px rgba(255,255,255,0.2);
+            }
+
+            /* Cut line animation */
+            .letter-container:hover .absolute.h-\[2px\] {
+                height: 4px;
+                box-shadow: 0 0 10px rgba(255,255,255,0.8);
+            }
+        </style>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close mobile menu when clicking on links
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
